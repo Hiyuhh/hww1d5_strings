@@ -49,8 +49,6 @@ for review in reviews:
 word_count(reviews)
 
 # Task 3: Review Summary
-# Implement a script that takes the first 30 characters of a review and appends "…" to create a summary. Ensure that the summary does not cut off in the middle of a word.
-
 valorant = ["The day after IGNITION, the world is in shock. VALORANT PROTOCOL— a covert operation \
 set up to prevent just such disasters— scrambles to make sense of the unfolding events. \
 Analysis of Venice and the remnants of the package suggests the detonation of a device \
