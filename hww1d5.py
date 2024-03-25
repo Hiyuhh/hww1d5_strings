@@ -53,16 +53,20 @@ valorant = ["The day after IGNITION, the world is in shock. VALORANT PROTOCOL—
 set up to prevent just such disasters— scrambles to make sense of the unfolding events. \
 Analysis of Venice and the remnants of the package suggests the detonation of a device \
 harnessing the power of Radianite, previously thought to be a clean and safe source of energy."]
-update = []
 def script():
-    word_count = 0
-    for word in valorant:
-        splitted_script = word.split()
-    for word in splitted_script:
-        if word_count < 30:
-            update.append(word)
-            word_count += 1
-        elif word_count == 30:
-            break
-    print(" ".join(update) + "...")
-script()
+    words = valorant[0] 
+    if len(words) > 31:
+        last_character = 30
+        while last_character > 0:
+            if words[last_character] == " ":  # if the last character is a space
+                break
+            last_character -= 1
+        if last_character == -1:
+            characters = words[:31] + "..." 
+        else:
+            characters = words[:last_character] + "..." # if the last character is not a space
+    else:
+        characters = words # if the length of the words is less than 31
+    print(characters)
+    
+    script()
